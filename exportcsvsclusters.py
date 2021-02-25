@@ -34,6 +34,7 @@ def main():
         zipObj.write(cfile, fname)
 
     zipObj.close()
+    self.dynamic_exports.append({"extractFrom": "exportcsvs.zip", "kind": None, "meta": None})
 
     for k, v in inv_map.items():
         fname = "{}.csv".format(k)
