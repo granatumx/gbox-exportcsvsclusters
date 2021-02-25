@@ -1,0 +1,21 @@
+id: ExportCSVsClusters-{VER}
+meta:
+  title: Export CSVs for Clusters {VER}
+  subtitle: >-
+    This GBOX enables the exporting of clustered or labelled data from any assay that has been prepared
+  description: >
+    Select your assay and your cluster information, and a zipped file will contain the CSVs for the selection
+    of columns from the provided assay.
+endpoints:
+  backend:
+    type: docker
+    image: {GBOX}
+    cmd: python ./exportcsvsclusters.py
+frontend:
+  imports:
+    - kind: assay
+      label: The assay to take expression values from
+      injectInto: assay
+    - kind: sampleMeta
+      label: The meta data containing the cluster or labelled columns (cells usually)
+      injectInto: groups

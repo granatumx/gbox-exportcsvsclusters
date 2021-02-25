@@ -1,0 +1,9 @@
+id: export_csvs_clusters-{VER}
+
+meta:
+  maintainer:
+    name: GranatumX
+    email: lana.garmire.group@gmail.com
+
+gboxes:
+  - ./yamls/exportcsvsclusters.yaml
